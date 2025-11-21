@@ -40,7 +40,7 @@ with 'P-'. Local variables are not restricted in any way."
 
 <GLOBAL P-ONEOBJ <>>
 
-
+
 
 "tables and globals for looking at the input"
 
@@ -104,7 +104,7 @@ with 'P-'. Local variables are not restricted in any way."
 <CONSTANT P-NC2 8>	;"start of second noun clause"
 <CONSTANT P-NC2L 9>	;"end of second noun clause"
 
-
+
 
 "PARSER -- Grovel down the input finding the verb, prepositions, and
 noun clauses. If the input is <direction> or <walk> <direction>, fall
@@ -651,7 +651,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 <GLOBAL P-MINUTES 0>	;"number to left of : in a time"
 <GLOBAL P-NUMBER 0>	;"actual number found (NUMBER? substitutes INTNUM)"
 
-
+
 
 <ROUTINE ORPHAN-MERGE ("AUX" (CNT -1) TEMP VERB BEG END
 		       (ADJ <>) (ADJB <>) (VRB <>) (NOUN <>) ADJE WRD) 
@@ -794,7 +794,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 	<TELL "\" in a way that I don't understand." CR>
 	<SETG QUOTE-FLAG <>>
 	<SETG P-OFLAG <>>>
-
+
 " Perform syntax matching operations, using P-ITBL as the source of
   the verb and adjectives for this input. Returns false if no
   syntax matches, and does it's own orphaning. If return is true,
@@ -890,7 +890,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 
 <GLOBAL NOT-RECOGNIZED "That sentence isn't one I recognize.">
 
-
+
 <ROUTINE ORPHAN (D1 D2 "AUX" (CNT -1))
 	<COND (<NOT ,P-MERGED>
 	       <PUT ,P-OCL1 ,P-MATCHLEN 0>
@@ -1000,7 +1000,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 		      <SET WRD <PREP-TO-WORD .PREP>>
 		      <PRINTB .WRD>)>)>>
 
-
+
 "CLAUSE-COPY"
 
 <GLOBAL P-CCTBL <TABLE 0 0 0 0 0>>
@@ -1069,7 +1069,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 	       <PUT .OCL .PTR 0>
 	       <PUT .OCL ,P-MATCHLEN .PTR>)>>
 
-
+
 
 <ROUTINE PREP-TO-WORD (PREP "AUX" (CNT 2) SIZE)
 	 <SET SIZE <GET ,PREPOSITIONS 0>>
@@ -1140,7 +1140,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 			  <COND (<G? .CNT .NUM> <RETURN>)>
 			  <PRINTI ", ">>)>>>
 
-
+
 <ROUTINE BUT-MERGE (TBL "AUX" LEN BUTLEN (CNT 1) (MATCHES 0) OBJ NTBL)
 	<SET LEN <GET .TBL ,P-MATCHLEN>>
 	<PUT ,P-MERGE ,P-MATCHLEN 0>
@@ -1194,7 +1194,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 <CONSTANT P-ONE 2>
 
 <CONSTANT P-INHIBIT 4>
-
+
 
 <ROUTINE SNARFEM (PTR EPTR TBL "AUX" (BUT <>) LEN WV WRD NW (WAS-ALL <>))
    <SETG P-AND <>>
@@ -1500,7 +1500,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 			       <RTRUE>)>
 			<TELL " ">>)>>
 
-
+
 
 <ROUTINE GLOBAL-CHECK (TBL "AUX" LEN RMG RMGL (CNT 0) OBJ OBITS FOO NOBJ)
 	<SET LEN <GET .TBL ,P-MATCHLEN>>
@@ -1716,7 +1716,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 		<COND (<EQUAL? .ITM <GET .TBL .CNT>>
 		       <RETURN <REST .TBL <* .CNT 2>>>)
 		      (<IGRTR? CNT .SIZE> <RFALSE>)>>>
-
+
 <ROUTINE ZMEMQB (ITM TBL SIZE "AUX" (CNT 0))
 	<REPEAT ()
 		<COND (<EQUAL? .ITM <GETB .TBL .CNT>>

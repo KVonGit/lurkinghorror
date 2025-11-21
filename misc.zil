@@ -294,7 +294,7 @@
 <ROUTINE RANDOM-ELEMENT (FROB)
 	 <GET .FROB <RANDOM <GET .FROB 0>>>>
 
-
+
 
 ;"former MAIN.ZIL stuff"
 
@@ -594,7 +594,7 @@ be included when the crunch comes."
 
 <GLOBAL P-NOT-HERE 0>
 
-
+
 <GLOBAL WHAT-DO-YOU-WANT-TO "What do you want to ">
 
 <ROUTINE FAKE-ORPHAN ("AUX" TMP)
