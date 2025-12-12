@@ -43,5 +43,5 @@ That plays the sound at more than 2X speed. When playing the original game on Am
 Also, Sound 17 in the blorb on if-archive uses the original 32910, where the majority of those sounds use the same frequency as the DOS sounds.
 
 I'm still leaving the value in the recreated Amiga files at $5a for two reasons:
-- I don't understand all this code. =)
+- I don't fully understand all this sound stuff, especially on DOS and Amiga. =)
 - It sounds fine this way on Amiga. ;)
