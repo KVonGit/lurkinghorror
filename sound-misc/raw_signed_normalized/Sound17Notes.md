@@ -31,12 +31,14 @@ Let's plug our values into that formula.
 
 That ends up being (roughly) 82928. The Big Endian word value cannot be higher than 65535; so, it seems that is why this is the value used in the DOS version of Sound 17 from if-archive:
 
+```
 FILE: LURKIN17.SND
 NOTE: 50 (32 HEX)
 SAMPLE_FREQ: 65535 (FF FF)
 SOUND_DATA_LEN: 39248 (99 50)
+```
 
-That plays the sound and more than 2X speed. When playing the original game on Amiga Forever, that is not the case. On Amiga, the sound (to my ear) is played at its original 32910. (My guess is it defaults to the original sample frequency value because it cannot handle playing a sound at 65,535?)
+That plays the sound at more than 2X speed. When playing the original game on Amiga Forever, that is not the case. On Amiga, the sound (to my ear) is played at its original 32910. (My guess is it defaults to the original sample frequency value because it cannot handle playing a sound at 65,535?)
 
 Also, Sound 17 in the blorb on if-archive uses the original 32910, where the majority of those sounds use the same frequency as the DOS sounds.
 
