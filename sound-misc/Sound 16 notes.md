@@ -43,7 +43,7 @@ On a slow Amiga (which was the most common at the time), Sound 11 would finish p
 
 Also, if the conditions are not met (unplugged coaxial cable already, and are wearing boots and gloves), then Sound 16 does not play. All we hear is Sound 11 (the sound of electricity).
 
-So, using synchronous sounds here makes sort of makes sense, I guess.
+So, using synchronous sounds here sort of makes sense, I guess.
 
 ...but I digress. The true reason this note exists is Sound 16 has its 'repeats' set to 0, for an infinite loop. However, the sound seems to be scripted to be stopped at the end of the same turn (by I-FROB-APPEARS).
 
