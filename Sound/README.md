@@ -5,7 +5,6 @@ For each file:
 - made notes concerning the header data
 - used HxD to remove the header
 - imported RAW 8-bit unsigned data to Audacity, using the sample rate from the header data
-- normalized sounds -2 if they red-lined
 - exported that as RAW 8-bit signed data
 - used HxD to add the header, saving as **.dat**
 
