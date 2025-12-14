@@ -80,7 +80,7 @@ Offset(h) 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 00000000  00 09 90 4C 40 FF 00 04 90 4C 00                 ...L@ÿ...L.
 ```
 
-Bit 3 is the "note" value. Here, we have 76.
+Byte 3 is the "note" value. Here, we have 76.
 
 To find what frequency this will use, there is a formula:
 ```
