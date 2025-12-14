@@ -63,12 +63,12 @@ Offset(h) 00 01 02 03 04 05 06 07 08 09
 
 00000000  C2 64 01 3C 3C 00 00 00 C2 5C
 ```
-- Bits 0-1: C2 64 = length of the following data is 49764 bits
-- Bit 2: 01 = play once
-- Bits 3: 3C = base_note is 60
-- Bits 4-5: 3C 00 = sample frequency is 15360
-- Bits 6-7: always 00 00 and always unused
-- Bits 8-9: C2 5C = actual length of sound data (which follows) is 49756 bits
+- Bytes 0-1: C2 64 = length of the following data is 49764 bits
+- Byte 2: 01 = play once
+- Bytes 3: 3C = base_note is 60
+- Bytes 4-5: 3C 00 = sample frequency is 15360
+- Bytes 6-7: always 00 00 and always unused
+- Bytes 8-9: C2 5C = actual length of sound data (which follows) is 49756 bits
 
 ---
 The MID file determines the actual frequency played.
