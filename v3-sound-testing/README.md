@@ -2533,6 +2533,11 @@ The game only uses ID `0` in the `KILL-SOUNDS` script. Real IDs are used otherwi
 </details>
 
 ---
+### Screen Recordings
+
+https://drive.google.com/drive/folders/1Lj4qFd-GUPjm_dknMsc2czqisZDYPBTs?usp=sharing
+
+---
 ## Conclusion (sort of)
 
 So... This game's sounds need to be created quite a few different ways if we want it to work in all the terps that can play sounds.
