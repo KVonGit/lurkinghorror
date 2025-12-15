@@ -23,7 +23,7 @@
 
 [4] Frotz (not Windows Frotz, but Frotz) checks for either bit 4 *or* bit 7 when the story version is V3, presumably because i6 sets bit 7 for V3, but the specs seem to say it should set bit 4 (although the actual AMIGAZIP terp cares not about either bit; it just plays sounds regardless, like Gargoyle and Filfre).
 
-[5] The current version of Ozmoo has a couple of sound_effect bugs at the moment (today is 11/11/2025). It doesn’t seem to recognize sound ID 0 as the current sound, and triggering a new sound while a sound is playing can mess up the repeats value.
+[5] The current version of Ozmoo has a couple of sound_effect bugs at the moment (today is 11/11/2025). It doesn’t seem to recognize sound ID 0 as the current sound, and triggering a new sound while a sound is playing can mess up the repeats value. ***UPDATE 2025/12/15: The former has been fixed in Ozmoo v14.58.***
 
 [6] The last release of Frotz **for DOS** with working sound was 2.51.
 
