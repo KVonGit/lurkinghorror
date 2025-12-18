@@ -205,7 +205,7 @@ We can also use AIFF ([id].AIFF), but WAV is recommended.
 The only way to have our own looping sounds in our own v3 games would be to use the same release and serial numbers as *The Lurking Horror*, and choose our sound IDs accordingly.
 
 > [!NOTE]
-> We *could* modify Ozmoo to set the repeats however we like.
+> Alternatively, we could modify Ozmoo (by changing the repeats table in **sound.asm**) before building the game to set the repeats however we like. (Thanks to fredrikr for this tip!)
 
 ---
 ### Filfre 1.1.1
