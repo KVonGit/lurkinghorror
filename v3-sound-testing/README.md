@@ -6,12 +6,12 @@
 |-|-|-|-|-|-|
 | Infocom AMIGAZIP | NO | YES | N/A | YES [1] | YES |
 | [frotzpl3](https://www.ifarchive.org/indexes/if-archive/infocom/interpreters/frotz/old/#frotzpl3.zip) (DOS) | YES | YES | N/A | YES [2] | YES |
+| [Gargoyle (Windows)](https://ccxvii.net/gargoyle/) | NO | N/A | NOT THIS GAME [3][8] | YES [3] | YES |
+| [Ozmoo (MEGA65)](https://github.com/johanberntsson/ozmoo) | NO | NO [3] | N/A | YES [3] | YES |
 | [Frotz 2.51 (DOS)](https://www.ifarchive.org/indexes/if-archive/infocom/interpreters/frotz/old/#frotz251.zip) [6] | YES [4] | NO | N/A | YES [3] | NO |
 | [Frotz 2.55 (Linux)](https://www.ifarchive.org/indexes/if-archive/infocom/interpreters/frotz/#frotz-2.55.tar.gz) | YES [4] | N/A | NOT THIS GAME [3][8] | YES [3] | YES [7] |
 | [Windows Frotz 1.27](https://github.com/DavidKinder/Windows-Frotz/releases/tag/1.27) | YES |	N/A | NO [3] | YES [3] | NO |
 | [Filfre 1.1.1 (Windows)](http://maher.filfre.net/filfre/index.html) | NO | NO [3] | N/A | NO | NO |
-| [Gargoyle (Windows)](https://ccxvii.net/gargoyle/) | NO | N/A | NOT THIS GAME [3][8] | YES [3] | YES |
-| [Ozmoo (MEGA65)](https://github.com/johanberntsson/ozmoo) [5] | NO | NO [3] | N/A | YES [3] | YES |
 | Parchment - [online](https://iplayif.com/api/sitegen) HTML conversion (using OGG sounds) | NO | N/A | N/A | NO | YES [9] |
 | fizmo-ncursesw 0.7.14-2 ([on Linux Mint](https://packages.ubuntu.com/source/jammy/fizmo-ncursesw)) | NO | N/A | NO [10] | NO | NO |
 
@@ -22,8 +22,6 @@
 [3] The terp has code to handle sounds as special cases if the game is identified as The Lurking Horror (using the release and serial numbers to identify the game)
 
 [4] Frotz (not Windows Frotz, but Frotz) checks for either bit 4 *or* bit 7 when the story version is V3, presumably because i6 sets bit 7 for V3, but the specs seem to say it should set bit 4 (although the actual AMIGAZIP terp cares not about either bit; it just plays sounds regardless, like Gargoyle and Filfre).
-
-[5] The current version of Ozmoo has a couple of sound_effect bugs at the moment (today is 11/11/2025). It doesn’t seem to recognize sound ID 0 as the current sound, and triggering a new sound while a sound is playing can mess up the repeats value. ***UPDATE 2025/12/15: The former has been fixed in Ozmoo v14.58.***
 
 [6] The last release of Frotz **for DOS** with working sound was 2.51.
 
@@ -206,9 +204,8 @@ We can also use AIFF ([id].AIFF), but WAV is recommended.
 ---
 The only way to have our own looping sounds in our own v3 games would be to use the same release and serial numbers as *The Lurking Horror*, and choose our sound IDs accordingly.
 
----
 > [!NOTE]
-> It would be cool if we could optionally include our own `looping_sounds` array for Ozmoo in our V3 games.
+> We *could* modify Ozmoo to set the repeats however we like.
 
 ---
 ### Filfre 1.1.1
@@ -2524,9 +2521,7 @@ get stone
 
 At this point, the game ends, and `KILL-SOUNDS` is called, which in turn calls `sound_effect 0 3;` then `sound_effect 0 4;`, which does not stop these last two synchronous sounds in frotzpl3, because frotzpl3 runs a `while` loop throughout each sound's duration when there are synchronous `sound_effect` calls.
 
-Also, on Ozmoo, it does not recognize ID `0` as the current sound (at this time); so, Ozmoo also successfully plays these last two synchronous sounds, due to the bug.
-
-Also noteworthy: the only times `KILL-SOUNDS` is called during this is when the game ends or iff we enter $SOUND to disable sounds during play.
+Also noteworthy: the only times `KILL-SOUNDS` is called during this is when the game ends or if we enter $SOUND to disable sounds during play.
 
 The game only uses ID `0` in the `KILL-SOUNDS` script. Real IDs are used otherwise.
 
